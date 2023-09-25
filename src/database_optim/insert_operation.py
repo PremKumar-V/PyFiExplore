@@ -12,22 +12,33 @@ def insert_in_database():
 
     for (
         dir,
-        _,
+        sub_dirs,
         files,
     ) in os.walk(search_file_path):
         dir_name = dir.split("\\")[-1]
-        # file_name = os.path.splitext(files)[0]
+
         cur.execute(
             f"""
-            INSERT INTO FILE_SYSTEM (name, path, is_folder) VALUES (
-            '{dir_name}',
-            '{dir}',
-            true
-            )
+            INSERT INTO FILE_SYSTEM (name, path, is_folder) VALUES ('{dir_name}', '{dir}', true )
             """
         )
+        for sub_dir in sub_dirs:
+            sub_dir_name = sub_dir.split("\\")[-1]
+            cur.execute(
+                f"""
+                    INSERT INTO FILE_SYSTEM (name, path, is_folder) VALUES ('{sub_dir_name}', '{sub_dir}', true )
+                    """
+            )
+        if files:
+            for file in files:
+                file_name = os.path.splitext(file)[0]
+                cur.execute(
+                    f"""
+                    INSERT INTO FILE_SYSTEM (name, path, is_folder) VALUES ('{file_name}', '{file}', false )
+                    """
+                )
+
         conn.commit()
-        break
     conn.close()
 
 
