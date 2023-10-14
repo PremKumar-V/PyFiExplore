@@ -162,5 +162,6 @@ cython_debug/
 # Database files
 *.db
 
-# Setup file
-*.sh
+
+# Directory file
+*.json
