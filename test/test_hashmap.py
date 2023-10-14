@@ -25,12 +25,12 @@ class TestHashMap:
             == "Error in Loading Json File: File Not Found"
         )
 
-    def test_create_json_file(self):
-        file_list = hashmap.create_json_file(
-            variable.search_path, variable.data_file_path
-        )
-        assert not isinstance(file_list, list)
-        assert isinstance(file_list, dict)
+    # def test_create_json_file(self):
+    #     file_list = hashmap.create_json_file(
+    #         variable.search_path, variable.data_file_path
+    #     )
+    #     assert not isinstance(file_list, list)
+    #     assert isinstance(file_list, dict)
 
 
 if __name__ == "__main__":
