@@ -1,11 +1,20 @@
 # PyFiExplore
 File Explorer Made with Python For Blazzingly Fast Experience
 
-## To Run This Project
-
-- ```python -m venv env``` or ```python3 -m venv env```
-- ```env/Scripts/activate``` or ```source env/bin/activate```
-- ```pip install -r requirements.txt```
-- _Create .env File_
+## ENV Files
+### _Create .env File_
   - Update variable `SEARCH_PATH` and `DATA_FILE_PATH` with your choice
-- ```python src/tk_window.py``` or ```python3 src/tk_window.py```
+
+## To Run This Project (Assuming you already create ENV Files)
+
+### For Windows
+- ```python -m venv env```
+- ```env/Scripts/activate```
+- ```pip install -r requirements.txt```
+- ```python src/tk_window.py```
+  
+### For Linux/Unix
+- ```python3 -m venv env``` 
+- ```source env/bin/activate```
+- ```pip install -r requirements.txt```
+- ```python3 src/tk_window.py```
