@@ -4,6 +4,10 @@ import os
 
 class Variable:
     def __init__(self) -> None:
+        """
+        @returns None
+        """
+
         load_dotenv()
 
         self.search_path = os.getenv("SEARCH_PATH")
