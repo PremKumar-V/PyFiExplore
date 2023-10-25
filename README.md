@@ -1,5 +1,9 @@
 # PyFiExplore
-File Explorer Made with Python For Blazzingly Fast Experience
+File Explorer Made with Python For Blazzingly Fast File Managing Experience
+
+## About this project
+- Windows file manager is so useful but will test your patience when it comes to searching a particular file. This issue is solved in this project.
+- Project is still a prototype.
 
 ## ENV Files
 ### _Create .env File_
